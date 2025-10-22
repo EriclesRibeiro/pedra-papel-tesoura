@@ -1,6 +1,7 @@
 import controller.JogoController;
 import model.Jogada;
 import model.Jogador;
+import view.Historico;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -12,6 +13,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Historico historico = new Historico();
         /*
         * Opções de jogadas disponíveis
         * */
@@ -38,7 +40,14 @@ public class Main {
         um.setJogada(pedra);
         dois.setJogada(pedra);
 
-        JogoController.Jogar(um, dois);
+        JogoController.Jogar(um, dois, historico);
+
+        um.setJogada(papel);
+        dois.setJogada(tesoura);
+
+        JogoController.Jogar(um, dois, historico);
+
+        historico.mostrarHistorico();
     }
 
 }
