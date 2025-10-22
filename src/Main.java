@@ -35,7 +35,7 @@ public class Main {
         Jogador um = new Jogador("Jogador 1");
         Jogador dois = new Jogador("Jogador 2");
 
-        um.setJogada(tesoura);
+        um.setJogada(pedra);
         dois.setJogada(pedra);
 
         JogoController.Jogar(um, dois);

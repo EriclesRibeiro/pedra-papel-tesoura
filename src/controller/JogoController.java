@@ -11,11 +11,11 @@ public class JogoController {
         Jogada jogada2 = jogador2.getJogada();
 
         if (jogada1.ganha.contains(jogada2)) {
-            System.out.println("Jogador 1 ganhou");
+            System.out.println("O(A) jogador(a) " + jogador1.getNome() + " ganhou da(a) jogador(a) " + jogador2.getNome() + "!");
         } else if (jogada1.perde.contains(jogada2)) {
-            System.out.println("Jogador 2 ganhou");
+            System.out.println("O(A) jogador(a) " + jogador2.getNome() + " ganhou do(a) jogador(a)" + jogador1.getNome() + "!");
         } else {
-            System.out.println("Empatou");
+            System.out.println("Os(As) jogadores(as) " + jogador1.getNome() + " e " + jogador2.getNome() + " empataram!");
         }
 
     }
